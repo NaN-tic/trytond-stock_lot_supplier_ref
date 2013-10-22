@@ -1,0 +1,11 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:stock.lot:"
+msgid "Supplier ref per lot must be unique"
+msgstr "La referència del proveïdor ha de ser única per lot"
+
+msgctxt "field:stock.lot,supplier_ref:"
+msgid "Supplier Reference"
+msgstr "Referència de proveïdor"
