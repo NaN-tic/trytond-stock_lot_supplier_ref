@@ -1,6 +1,6 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
-from trytond.model import fields
+from trytond.model import Unique, fields
 from trytond.pool import PoolMeta
 
 __all__ = ['Lot']
@@ -15,8 +15,9 @@ class Lot:
     @classmethod
     def __setup__(cls):
         super(Lot, cls).__setup__()
+        t = cls.__table__()
         cls._sql_constraints += [
-            ('unique_lot_supplier_ref', 'UNIQUE(number, supplier_ref)',
+            ('unique_lot_supplier_ref', Unique(t, t.number, t.supplier_ref),
                 'Supplier ref per lot must be unique'),
             ]
 
