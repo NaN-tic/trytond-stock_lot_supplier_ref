@@ -4,11 +4,11 @@ from trytond.model import Unique, fields
 from trytond.pool import PoolMeta
 
 __all__ = ['Lot']
-__metaclass__ = PoolMeta
 
 
 class Lot:
     __name__ = 'stock.lot'
+    __metaclass__ = PoolMeta
 
     supplier_ref = fields.Char('Supplier Reference')
 
