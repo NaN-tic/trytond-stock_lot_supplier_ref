@@ -17,7 +17,8 @@ class Lot:
         super(Lot, cls).__setup__()
         t = cls.__table__()
         cls._sql_constraints += [
-            ('unique_lot_supplier_ref', Unique(t, t.number, t.supplier_ref),
+            ('unique_lot_supplier_ref', Unique(t, t.product,
+                    t.number, t.supplier_ref),
                 'Supplier ref per lot must be unique'),
             ]
 
