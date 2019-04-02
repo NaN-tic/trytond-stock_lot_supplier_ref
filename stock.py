@@ -6,9 +6,8 @@ from trytond.pool import PoolMeta
 __all__ = ['Lot']
 
 
-class Lot:
+class Lot(metaclass=PoolMeta):
     __name__ = 'stock.lot'
-    __metaclass__ = PoolMeta
 
     supplier_ref = fields.Char('Supplier Reference')
 
